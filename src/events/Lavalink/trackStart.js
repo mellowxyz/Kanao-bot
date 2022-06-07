@@ -13,19 +13,19 @@ module.exports = async (client, player, track, payload) => {
 
   const thing = new MessageEmbed()
     .setTitle(`Started Playing`)
-    .setDescription(`[${track.title}](${track.uri}) - \`[${convertTime(track.duration)}]\``)
-    .setThumbnail(`https://img.youtube.com/vi/${track.identifier}/mqdefault.jpg`)
+    .setDescription(`[${track.title}](${track.uri})`)
+    //.setThumbnail(`https://img.youtube.com/vi/${track.identifier}/mqdefault.jpg`)
     .setColor(client.embedColor)
     .setTimestamp()
-  const But1 = new MessageButton().setCustomId("vdown").setEmoji("🔉").setStyle("SECONDARY");
+  const But1 = new MessageButton().setCustomId("vdown").setEmoji("<:emoji_26:980919947612000266>").setStyle("SECONDARY");
 
-  const But2 = new MessageButton().setCustomId("stop").setEmoji("⏹️").setStyle("SECONDARY");
+  const But2 = new MessageButton().setCustomId("stop").setEmoji("<:stop2:983754748673032283>").setStyle("SECONDARY");
 
-  const But3 = new MessageButton().setCustomId("pause").setEmoji("⏸️").setStyle("SECONDARY");
+  const But3 = new MessageButton().setCustomId("pause").setEmoji("<:emoji_24:980919893396439040>").setStyle("SECONDARY");
 
-  const But4 = new MessageButton().setCustomId("skip").setEmoji("⏭️").setStyle("SECONDARY");
+  const But4 = new MessageButton().setCustomId("skip").setEmoji("<:emoji_25:980919921007542332>").setStyle("SECONDARY");
 
-  const But5 = new MessageButton().setCustomId("vup").setEmoji("🔊").setStyle("SECONDARY");
+  const But5 = new MessageButton().setCustomId("vup").setEmoji("<:emoji_27:980919980000424026>").setStyle("SECONDARY");
 
   const row = new MessageActionRow().addComponents(But1, But2, But3, But4, But5);
 
